@@ -12,7 +12,6 @@
     <link href="/dist/output.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <script src="myscripts.js"></script>
-    <script src="./card.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="/dist/output.css" rel="stylesheet">
@@ -68,7 +67,8 @@
             });
         });
     </script>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="home.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -185,17 +185,17 @@
                         flex-direction: column;
                         align-items: center;
                         ">
-                                <h6 style="font-size: 16px; text-align: left;">
-                                    The Langtang trekking tour is an awe-inspiring adventure that encapsulates the very
-                                    essence of the Himalayas. At an elevation of 3856 meters, the Langtang Valley boasts
-                                    panoramic views of the Himalayas, including Langtang Lirung (7,227m). This region is
-                                    home to Langtang National Park, spanning over 1,710 square kilometers and hosting
-                                    diverse wildlife, such as red pandas and Himalayan black bears. With over 70
-                                    glaciers,
-                                    including the awe-inspiring Langtang Glacier, and over 400 species of birds, the
-                                    Langtang trekking tour is a captivating journey that will leave you with memories to
-                                    cherish for a lifetime.
-                                </h6>
+                            <h6 style="font-size: 16px; text-align: left;">
+                                The Langtang trekking tour is an awe-inspiring adventure that encapsulates the very
+                                essence of the Himalayas. At an elevation of 3856 meters, the Langtang Valley boasts
+                                panoramic views of the Himalayas, including Langtang Lirung (7,227m). This region is
+                                home to Langtang National Park, spanning over 1,710 square kilometers and hosting
+                                diverse wildlife, such as red pandas and Himalayan black bears. With over 70
+                                glaciers,
+                                including the awe-inspiring Langtang Glacier, and over 400 species of birds, the
+                                Langtang trekking tour is a captivating journey that will leave you with memories to
+                                cherish for a lifetime.
+                            </h6>
                             <div class="align-self-start " style="padding-top: 5px;">
                                 <span class="fa fa-star " style="padding-right: 3px;"></span>
                                 <span class="fa fa-star " style="padding-right: 3px;"></span>
@@ -212,8 +212,9 @@
                                     <h6>Estimated days of hiking: 5-8 Days</h6>
                                 </div>
                             </div>
-                            <div class="text-center " style="margin-top: 0px !important; padding-bottom: 15px;"><a href="./langtang.html"><button
-                                        type="button" class="btn btn-success ">Explore</button></a>
+                            <div class="text-center " style="margin-top: 0px !important; padding-bottom: 15px;"><a
+                                    href="./langtang.html"><button type="button"
+                                        class="btn btn-success ">Explore</button></a>
                             </div>
                         </div>
                     </div>
@@ -222,106 +223,7 @@
         </div>
     </div>
     </div>
-
-
-    <script>
-        function toggleLangtangDetail() {
-            document.getElementById('langtangTour').click();
-        }
-        // Add the hot spots to the viewer
-
-
-        if (window.innerWidth > 768) {
-            // Desktop view
-            var viewer = pannellum.viewer('panorama', {
-                "type": "equirectangular",
-                "panorama": "https://laliguras.de/images/himalPanoramaCroppedSaledDown.webp",
-                "ignoreGPanoXMP": true,
-                "autoLoad": true,
-                "haov": 300 * .6,
-                "vaov": 80 * .6,
-                "vOffset": 2,
-                "minYaw": -76.935,
-                "maxYaw": 76.935,
-                "pitch": 0,
-                "minPitch": 4,
-                "maxPitch": 4,
-                "showZoomCtrl": false,
-                "mouseZoom": false,
-                "keyboardZoom": false,
-                "showFullscreenCtrl": false,
-                "hfov": 0,
-                "vfov": 0,
-                "orientationOnByDefault": true,
-                "hotSpots": [{
-                    "pitch": 10.2,
-                    "yaw": -2,
-                    "type": "info",
-                    "text": "Langtang Trek",
-                    "cssClass": "custom-marker",
-                    // "cssClass": "fa fa-map-marker fa-3x",
-                    "clickHandlerFunc": toggleLangtangDetail
-                }]
-            });
-        }
-        else {
-            // For mobile view
-            var viewer = pannellum.viewer('panorama', {
-                "type": "equirectangular",
-                "panorama": "https://laliguras.de/images/himalPanoramaCroppedSaledDown.webp",
-                "ignoreGPanoXMP": true,
-                "autoLoad": true,
-                "haov": 800 * 1.2,
-                "vaov": 140 * 1.2,
-                "vOffset": 2,
-                "minYaw": -76.935,
-                "maxYaw": 76.935,
-                "pitch": 0,
-                "minPitch": 10,
-                "maxPitch": 10,
-                "showZoomCtrl": false,
-                "mouseZoom": false,
-                "keyboardZoom": false,
-                "showFullscreenCtrl": false,
-                "hfov": 50,
-                "vfov": 5,
-                "orientationOnByDefault": true,
-                "hotSpots": [{
-                    "cssClass": "custom-marker",
-                    "pitch": 30,
-                    "yaw": -10,
-                    "type": "info",
-                    "text": "Langtang Trek",
-                    "clickHandlerFunc": toggleLangtangDetail
-                }]
-            });
-
-        }
-        var largeScreenMarker_Langtang = viewer.createHotSpotElement({
-            "pitch": 0,
-            "yaw": 0,
-            "cssClass": "hotspot-button",
-            "createTooltipFunc": hotspotTooltipFunc,
-            "sceneId": "scene2"
-        });
-
-        console.log(viewer);
-        viewer.addHotSpot(largeScreenMarker_Langtang);
-        var button = document.getElementById("myButton");
-
-        // Add a click event listener
-        button.addEventListener("click", function () {
-            // Check the screen size and perform different actions
-            if (window.innerWidth < 768) {
-                // Action for small screens
-                console.log("Clicked on small screen");
-            } else {
-                // Action for larger screens
-                console.log("Clicked on large screen");
-            }
-        });
-    </script>
-
+    <script src="./globalScript.js"></script>
 </body>
 
 </html>

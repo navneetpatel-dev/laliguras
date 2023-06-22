@@ -518,6 +518,12 @@ tr:nth-child(even) {
   margin-top: -13px;
 }
 
+@media only screen and (max-height: 300px) {
+  #legCardContainer {
+    display: none !important;
+  }
+}
+
 @media only screen and (max-height: 450px) {
   /* #legCardContainer {
     display: none !important;
@@ -529,11 +535,9 @@ tr:nth-child(even) {
   #show_icon {
     margin-top: 0px;
   }
-}
 
-@media only screen and (max-height: 300px) {
-  #legCardContainer {
-    display: none !important;
+  #hide_icon {
+    margin-top: 0px;
   }
 }
 
