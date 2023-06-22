@@ -1,0 +1,19 @@
+.custom-modal {
+  width: 330px !important;
+  border-radius: 100px !important;
+}
+
+.custom-input {
+  /* max-width: 200px !important;
+  min-width: 200px !important;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+@media only screen and (max-width: 900px) {
+  .custom-modal {
+    /* width: 60% !important; */
+  }
+}
