@@ -1,0 +1,550 @@
+html,
+body,
+#mapDiv {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  border: none !important;
+}
+
+.modal-backdrop {
+  z-index: -1;
+}
+.esri-ui-top-left {
+  bottom: 40px !important;
+  right: 0px !important;
+  top: auto !important;
+  left: auto !important;
+}
+
+.esri-ui-bottom-right {
+  bottom: 0px !important;
+  right: 50px !important;
+}
+
+.hotel-icon img {
+  position: absolute !important;
+  bottom: 210px !important;
+}
+#advanced-prev-button {
+  color: revert !important;
+}
+#beginner-prev-button {
+  color: revert !important;
+}
+#expert-prev-button {
+  color: revert !important;
+}
+#beginner-next-button {
+  color: revert !important;
+}
+#advanced-next-button {
+  color: revert !important;
+}
+#expert-next-button {
+  color: revert !important;
+}
+@media only screen and (max-width: 600px) {
+  .difficultyButtons {
+    width: 100%;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-top: 20px;
+  }
+
+  .hotel-icon {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  #legDiv {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    margin-top: 20px;
+  }
+
+  #legCardContainer {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-top: 20px;
+    /* width:auto; */
+  }
+
+  .esri-ui-bottom-right {
+    /* top: 440px; */
+    bottom: 45px !important;
+    right: -5px !important;
+  }
+
+  .esri-ui-top-left {
+    bottom: 125px !important;
+  }
+
+  .leg-box {
+    width: 260px !important;
+    padding-left: 25px !important;
+    border-radius: 5px !important;
+  }
+
+  .beginner-btn {
+    align-items: center;
+    width: 80px !important;
+    font-size: 14px !important;
+  }
+
+  .advanced-btn {
+    width: 80px !important;
+    height: fit-content;
+    font-size: 14px !important;
+  }
+
+  .expert-btn {
+    width: 80px !important;
+    height: fit-content;
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .difficultyButtons {
+    width: 100%;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-top: 20px;
+  }
+
+  .hotel-icon {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  #legDiv {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    margin-top: 20px;
+  }
+
+  #legCardContainer {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-top: 20px;
+    /* width: 100%; */
+  }
+
+  .esri-ui-bottom-right {
+    z-index: 1;
+    /* Ensure the esri-ui-bottom-right is above the legCardContainer */
+  }
+}
+/* Custom styles for responsiveness */
+
+/* Mobile */
+@media (max-width: 500px) {
+  .beginnerLegCardContainer {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  #legCardContainer {
+    position: absolute;
+    bottom: 45px !important;
+    background-color: white;
+    /* padding: 10px; */
+    /* border-radius: 5px; */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    left: 40% !important;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, 20%);
+  }
+}
+
+/* Tablet */
+@media (min-width: 501px) and (max-width: 1024px) {
+  .beginnerLegCardContainer {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+  }
+
+  #legCardContainer {
+    position: absolute;
+    /* bottom: 45px !important; */
+    background-color: white;
+    /* padding: 10px; */
+    /* border-radius: 5px; */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    left: 43% !important;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, 20%);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .beginnerLegCardContainer {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+  }
+
+  #legCardContainer {
+    position: absolute;
+    /* bottom: 45px !important; */
+    background-color: white;
+    /* padding: 10px; */
+    /* border-radius: 5px; */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    left: 50% !important;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, 20%);
+  }
+}
+html,
+body,
+#viewDiv {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  outline: none !important;
+  border: none !important;
+}
+
+.difficultyButtons {
+  width: 300px;
+  position: absolute;
+  top: 70px;
+  z-index: 1;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, 20%);
+  /* font-weight: 400px; */
+}
+
+.hotel-icon {
+  position: absolute;
+  top: 320px;
+  padding: 0px;
+  border: none;
+  left: 28px;
+  z-index: 1;
+  font-family: sans-serif;
+  /* font-weight: 400px; */
+}
+
+/* For leg showing card */
+#legDiv {
+  position: absolute;
+  top: 290px;
+  right: 0px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  font-family: sans-serif;
+}
+
+table button {
+  width: 300px;
+  /* Increase button width */
+  height: 30px;
+  background-color: rgb(0, 217, 255);
+  /* Change button background color */
+  border: none;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: rgb(223, 97, 185);
+  text-align: left;
+}
+
+table td {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.floatingDiv {
+  border-radius: 10px;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  background-color: white;
+  border: 1px solid black;
+  padding-top: 5px;
+  padding-right: 14px;
+  padding-left: 14px;
+  z-index: 990;
+  display: none;
+}
+
+.floatingDiv.show {
+  display: block;
+}
+
+.imageViewer360 {
+  position: fixed;
+  /* top: 50%;
+      left: 50%; */
+  height: 50vh;
+  width: 50vw;
+  transform: translate(50%, -150%);
+  background-color: white;
+  border: 1px solid black;
+  padding: 0px;
+  z-index: 1000;
+  display: none;
+}
+
+.imageViewer360.show {
+  display: block;
+}
+
+/* For 360 image view */
+#panorama {
+  width: 100%;
+  height: 100%;
+}
+
+#legCardContainer {
+  position: absolute;
+  bottom: 80px;
+  background-color: white;
+  /* padding: 10px; */
+  /* border-radius: 5px; */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, 20%);
+}
+
+@media only screen and (max-width: 600px) {
+  .difficultyButtons {
+    left: 69vw !important;
+    top: 50px !important;
+  }
+  .leg-button {
+    width: 55px !important;
+  }
+  #beginnerLeg9Button {
+    width: 61px !important;
+  }
+}
+
+.leg-button {
+  width: 72px;
+  border-radius: 2px !important;
+}
+
+.legCardContainer {
+  position: absolute;
+  top: -60px;
+  right: 0px;
+  height: 20vh;
+  width: 15vw;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+
+  /* set height to fill entire viewport */
+}
+
+nav {
+  height: 68px;
+  background-color: #222;
+  border-bottom: 1px solid #555;
+}
+
+.logo {
+  padding: 10px;
+  width: auto;
+  float: left;
+}
+
+.logo img {
+  height: 55px;
+}
+
+.list-item {
+  float: right;
+  margin-right: 25px;
+  margin-top: 17px;
+}
+
+.list-item li {
+  float: left;
+  padding: 13px 13px;
+  font-size: 18px;
+  border-radius: 3px;
+  transition: all 0.7s ease-in-out;
+}
+
+.list-item li a {
+  color: #eee;
+}
+
+.list-item li:hover {
+  background-color: brown;
+}
+#beginner-leg-details-text {
+  color: #262626 !important;
+}
+.leg-box {
+  width: 310px;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(211, 211, 211, 0.479);
+  text-align: center;
+}
+
+.leg-button {
+  margin-top: 10px;
+  margin-right: 0px;
+  margin-left: 3px;
+  background-color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  cursor: pointer;
+}
+
+.leg-button.active {
+  background-color: #ff69b4;
+  border: 1px solid #ff69b4;
+  color: #ffffff;
+}
+
+.leg-details {
+  display: none;
+  padding-top: 10px;
+}
+
+.leg-details.active {
+  display: block;
+}
+
+.leg-button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leg-button-group button {
+  background-color: #f2f2f2;
+  border: none;
+  cursor: pointer;
+}
+
+.leg-details table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.leg-details th,
+.leg-details td {
+  border: 1px solid #000;
+}
+
+.leg-details tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.leg-details tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #000;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #ffc0cb;
+}
+
+/* New */
+#show_icon {
+  cursor: pointer;
+  display: block;
+  margin-top: -13px;
+}
+
+#hide_icon {
+  cursor: pointer;
+  display: none;
+  margin-top: -13px;
+}
+
+@media only screen and (max-height: 450px) {
+  /* #legCardContainer {
+    display: none !important;
+  } */
+  #beginner-leg-details {
+    display: none !important;
+  }
+
+  #show_icon {
+    margin-top: 0px;
+  }
+}
+
+@media only screen and (max-height: 300px) {
+  #legCardContainer {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 1060px) and (max-height: 800px) {
+  #legCardContainer {
+    margin-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  #Buttons {
+    left: 55vw !important;
+  }
+}

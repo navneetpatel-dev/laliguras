@@ -308,6 +308,8 @@ function legCardGenerator(legInfo, difficulty, i) {
       button.classList.add("leg-button");
       button.textContent = "Leg " + (i + 1).toString();
       button.addEventListener("click", () => {
+        showLegView();
+
         legDetailsText.innerHTML = details;
         legDetails.classList.add("active");
         currentActiveLegIndex = i;
