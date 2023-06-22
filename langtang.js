@@ -58,17 +58,23 @@ checkIfLegButtonReady(false, "expertLeg0Button");
 const show_legContent = document.getElementById("show_icon");
 const hide_legContent = document.getElementById("hide_icon");
 
-const p_display = document.getElementById("beginner-leg-details");
+const p_displayB = document.getElementById("beginner-leg-details");
+const p_displayA = document.getElementById("advanced-leg-details");
+const p_displayE = document.getElementById("expert-leg-details");
 
 const showLegView = () => {
-  p_display.style.display = "block";
+  p_displayB.style.display = "block";
+  p_displayA.style.display = "block";
+  p_displayE.style.display = "block";
 
   show_legContent.style.display = "none";
   hide_legContent.style.display = "block";
 };
 
 const hideLegView = () => {
-  p_display.style.display = "none";
+  p_displayB.style.display = "none";
+  p_displayA.style.display = "none";
+  p_displayE.style.display = "none";
 
   show_legContent.style.display = "block";
   hide_legContent.style.display = "none";

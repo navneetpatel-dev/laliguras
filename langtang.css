@@ -525,10 +525,13 @@ tr:nth-child(even) {
 }
 
 @media only screen and (max-height: 450px) {
-  /* #legCardContainer {
-    display: none !important;
-  } */
   #beginner-leg-details {
+    display: none !important;
+  }
+  #advanced-leg-details {
+    display: none !important;
+  }
+  #expert-leg-details {
     display: none !important;
   }
 
