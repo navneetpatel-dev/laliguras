@@ -75,11 +75,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"
     />
-
     <link rel="stylesheet" href="langtang.css" />
-    <script src="./arcGIS.js" defer></script>
-    <script src="./reactive.js" defer></script>
-    <script src="./langtang.js" defer></script>
   </head>
 
   <body>
@@ -153,8 +149,6 @@
           src="./images/Close.png"
         />
       </a>
-      <!-- <button id="closeButton" style="float: right; border-radius: 50%; right: -10px !important;" 
-      onclick='document.getElementById("hotelDetails").classList.remove("show")'>X</button> -->
       <div id="hotelDetailText"></div>
     </div>
 
@@ -433,6 +427,27 @@
       </div>
       <p class="text-center font-weight-bold" id="show_icon">_</p>
       <p class="text-center font-weight-bold" id="hide_icon">_</p>
+      <!-- Script tagged in global -->
+      <script>
+        let imgIndex = 0;
+        let pv = null;
+        let totalNoOfImages = 0;
+        let index = 0;
+        function panoramaViewer(scenes) {
+          // console.log('inside panorama')
+          pv = pannellum.viewer("panorama", {
+            autoLoad: true,
+            default: {
+              firstScene: 0,
+              author: "Samip Dhoj Raut",
+              sceneFadeDuration: 1000,
+            },
+
+            scenes: scenes,
+          });
+          pv.loadScene(0);
+        }
+      </script>
     </div>
     <!-- Hotel bed click icon -->
     <a
@@ -510,5 +525,8 @@
         </div>
       </div>
     </div>
+    <script src="./langtang.js"></script>
+    <script src="./arcGIS.js"></script>
+    <script src="./reactive.js"></script>
   </body>
 </html>
